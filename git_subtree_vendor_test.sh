@@ -2,6 +2,11 @@
 
 set -e
 
+state=$(git update-index -q --refresh; test -z "$(git diff-index --name-only HEAD --)" || echo -dirty)
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+echo $(git config --get remote.github.url)@$(git rev-parse --short=7 HEAD)
+
 root=/tmp
 tmpdir=git_subtree_test_scratch_$(date +%Y%m%d%H%m%s)
 scratch=$root/$tmpdir
