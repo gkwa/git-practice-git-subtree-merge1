@@ -84,6 +84,11 @@ git commit -am "Add stuff to myproject now and we'll need to push to \
 vendor later"
 git push origin master:master
 
+git diff-tree --color -p vendor_branch
+
+git diff-tree --color -p origin/master
+
+git diff-tree --color -p vendor_remote/master
 
 git checkout vendor_branch
 git merge --squash -s subtree --no-commit master
