@@ -79,8 +79,10 @@ git commit -am "Add stuff to myproject now and we'll need to push to \
 vendor later"
 git push origin master:master
 
-# it should work the other way too, but I'm getting conflict when trying
-# to push
+# from http://git-scm.com/book/en/Git-Tools-Subtree-Merging
+# You can also do the opposite — make changes in the rack subdirectory
+# of your master branch and then merge them into your rack_branch branch
+# later to submit them to the maintainers or push them upstream.
 
 git checkout vendor_branch
 git merge --squash -s subtree --no-commit master
