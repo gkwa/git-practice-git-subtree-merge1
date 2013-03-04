@@ -77,7 +77,7 @@ git checkout master ||:
 echo edit from myproject >>vendor/test_v.txt
 git commit -am "Add stuff to myproject now and we'll need to push to \
 vendor later"
-git push
+git push origin master:master
 
 # it should work the other way too, but I'm getting conflict when trying
 # to push
