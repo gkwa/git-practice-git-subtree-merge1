@@ -91,4 +91,8 @@ git diff-tree --color -p origin/master
 git diff-tree --color -p vendor_remote/master
 
 git checkout vendor_branch
+git diff-tree --color -p master
+set +e
 git merge --squash -s subtree --no-commit master
+git diff --color
+set -e
