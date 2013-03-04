@@ -7,7 +7,7 @@
 # http://git-scm.com/book/en/Git-Tools-Subtree-Merging
 # http://posterous.timocracy.com/git-sub-tree-merging-back-to-the-subtree-for
 
-t:
+test:
 	sh -x git_subtree_vendor_test.sh
 clean:
 	rm -rf /tmp/git_subtree_test_scratch_*
