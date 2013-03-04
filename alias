@@ -1,0 +1,6 @@
+alias h='cd /Users/demo/pdev/git-practice/git_subtree6'
+alias c='cd /Users/demo/pdev/git-practice/git_subtree6 && make clean'
+
+alias r='cd $(ls -t1d /tmp/git_subtree_test_scratch_* | head -1)'
+alias m='cd $(ls -t1d /tmp/git_subtree_test_scratch_* | head -1)/myproject'
+alias v='cd $(ls -t1d /tmp/git_subtree_test_scratch_* | head -1)/vendor'
