@@ -72,10 +72,12 @@ git push
 
 # modify vendor file in myproject
 
-echo from http://git-scm.com/book/en/Git-Tools-Subtree-Merging
-echo You can also do the opposite — make changes in the rack subdirectory
-echo of your master branch and then merge them into your rack_branch branch
-echo later to submit them to the maintainers or push them upstream.
+set +x
+echo \# from http://git-scm.com/book/en/Git-Tools-Subtree-Merging
+echo \# You can also do the opposite — make changes in the rack subdirectory
+echo \# of your master branch and then merge them into your rack_branch branch
+echo \# later to submit them to the maintainers or push them upstream.
+set -x
 
 cd $scratch/myproject
 git checkout master ||:
