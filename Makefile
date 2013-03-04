@@ -1,4 +1,4 @@
-# usage: source ./alias && make
+# usage: make alias && source ./alias && make
 
 # practice commiting to parent and getting those changes back into the
 # vendor branch.
@@ -9,5 +9,13 @@
 
 test:
 	sh -x git_subtree_vendor_test.sh
+
+alias: alias.tmpl
+	@echo alias \'h=cd $(CURDIR)\' >$@
+	@echo alias \'c=cd $(CURDIR) \&\& make clean\' >>$@
+	@cat alias.tmpl >>$@
+.PHONY: alias
+
 clean:
 	rm -rf /tmp/git_subtree_test_scratch_*
+	rm -f alias
