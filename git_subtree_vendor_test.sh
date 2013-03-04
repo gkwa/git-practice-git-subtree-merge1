@@ -24,9 +24,11 @@ proj=myproject
 git clone --bare $scratch/$proj
 cd $scratch/$proj
 git remote add origin $scratch/$proj.git
-cp $scratch/$proj.git/hooks/post-update.sample $scratch/$proj.git/hooks/post-update
+cp $scratch/$proj.git/hooks/post-update.sample \
+    $scratch/$proj.git/hooks/post-update
 chmod +x $scratch/$proj.git/hooks/post-update
-perl -i.bak -pe 's{exec git-update-server-info}{exec git update-server-info}' $scratch/$proj.git/hooks/post-update
+perl -i.bak -pe 's{exec git-update-server-info}{exec git\
+	 update-server-info}' $scratch/$proj.git/hooks/post-update
 git push --set-upstream origin master
 
 cd $scratch
@@ -45,9 +47,11 @@ proj=vendor
 git clone --bare $scratch/$proj
 cd $scratch/$proj
 git remote add origin $scratch/$proj.git
-cp $scratch/$proj.git/hooks/post-update.sample $scratch/$proj.git/hooks/post-update
+cp $scratch/$proj.git/hooks/post-update.sample \
+    $scratch/$proj.git/hooks/post-update
 chmod +x $scratch/$proj.git/hooks/post-update
-perl -i.bak -pe 's{exec git-update-server-info}{exec git update-server-info}' $scratch/$proj.git/hooks/post-update
+perl -i.bak -pe 's{exec git-update-server-info}{exec git \
+	update-server-info}' $scratch/$proj.git/hooks/post-update
 git push --set-upstream origin master
 
 # Add vendor to myproject
@@ -66,7 +70,8 @@ git push
 cd $scratch/myproject
 git checkout master ||:
 echo edit from myproject >>vendor/test_v.txt
-git commit -am "Add stuff to myproject now and we'll need to push to vendor later"
+git commit -am "Add stuff to myproject now and we'll need to push to \
+vendor later"
 git push
 # git push vendor_remote vendor_branch:master
 
