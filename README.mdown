@@ -1,0 +1,28 @@
+Purpose here is to practice git subtree merge.  I keep getting conflict
+when trying to follow these steps
+
+> You can also do the opposite — make changes in the rack subdirectory of
+your master branch and then merge them into your rack_branch branch
+later to submit them to the maintainers or push them upstream.
+
+from http://git-scm.com/book/en/Git-Tools-Subtree-Merging
+
+That passage doesn't say anything about merge conflicts and I keep
+getting merge conflicts on the
+``git merge --squash -s subtree --no-commit master``
+
+step.  So either I'm doing something wrong or I
+should just accept it and go with the flow.  I tried reasoning as to why
+the conflict is happenning, but I don't see the the light yet.  Hence
+this practice script.  I'm trying all combinations to see if I can get
+around the conflict without simply resolving the conflict manually.
+
+To test it out, I do this
+``
+make alias && source ./alias && make
+``, then ``m`` to change cd the parent repo ``myproject`` and ``v`` to cd to ``vendor`` repo.
+
+
+
+
+LocalWords:  subtree
