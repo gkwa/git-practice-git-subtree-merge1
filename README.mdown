@@ -1,5 +1,5 @@
 Purpose here is to practice git subtree merge.  I keep getting conflict
-when trying to follow these steps
+when trying ``git merge --squash -s subtree --no-commit master``.
 
 > You can also do the opposite — make changes in the rack subdirectory of
 your master branch and then merge them into your rack_branch branch
